@@ -22,5 +22,4 @@ libraries:
 - name: jinja2
   version: latest
 - name: cloudstorage
-	version: latest
-# [END libraries]
+	version: latest# [END libraries]
