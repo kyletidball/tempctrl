@@ -21,6 +21,6 @@ libraries:
   version: latest
 - name: jinja2
   version: latest
-- name: cloudservices
+- name: cloudst
 	version: latest
 # [END libraries]
