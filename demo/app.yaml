@@ -1,14 +1,24 @@
-application: beertempctrl
-version: v1
 runtime: python27
 api_version: 1
-threadsafe: yes
+threadsafe: true
 
-env_variables:
-
+# [START handlers]
 handlers:
-- url: /blobstore.*
-  script: blobstore.app
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /bootstrap
+  static_dir: bootstrap
 
 - url: /.*
-  script: main.app
+  script: guestbook.app
+# [END handlers]
+
+# [START libraries]
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
+# [END libraries]
